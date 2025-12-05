@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxvpx0511unt"]
+
+[ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="1_uhymq"]
+[ext_resource type="Script" uid="uid://b75gis1627wkl" path="res://complete_scenes/ui/main_menu.gd" id="1_vy6ls"]
+[ext_resource type="LabelSettings" uid="uid://cue3k7t74c58x" path="res://complete_scenes/ui/ui_theme/title_label_settings.tres" id="2_lk8p1"]
+[ext_resource type="PackedScene" uid="uid://ctojs5873o1f5" path="res://complete_scenes/ui/ui_elements/custom_button.tscn" id="2_rxbl0"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vy6ls")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uhymq")
+
+[node name="Version" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_uhymq")
+text = "Версия 0.0.1"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Зайцы плохо на тебя влияют"
+label_settings = ExtResource("2_lk8p1")
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = ExtResource("1_uhymq")
+
+[node name="Start" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
+layout_mode = 2
+text = "Начать игру"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Settings" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
+layout_mode = 2
+text = "Настройки"
+
+[node name="Quit" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
+layout_mode = 2
+mouse_filter = 0
+text = "Выход"
+metadata/_edit_pinned_properties_ = [&"mouse_filter"]
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 16.555)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_uhymq")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Quit" to="." method="_on_quit_pressed"]
