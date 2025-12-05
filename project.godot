@@ -15,6 +15,7 @@ config/description="ГеймДжем ФКН 2
 «Зайцы плохо на тебя влияют»
 4–13 декабря 2025
 https://cs.hse.ru/gamejam/2025/"
+run/main_scene="uid://bxvpx0511unt"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
@@ -41,8 +42,9 @@ gdscript/warnings/unsafe_call_argument=1
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -54,6 +56,7 @@ folder_colors={
 "res://addons/": "gray",
 "res://assets/": "red",
 "res://autoloads/": "gray",
+"res://complete_scenes/ui/ui_theme/": "red",
 "res://docs/": "purple",
 "res://godot_state_charts_examples/": "pink",
 "res://guide_examples/": "pink",
