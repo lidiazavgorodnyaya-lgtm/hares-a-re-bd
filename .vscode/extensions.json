@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "geequlim.godot-tools",
+        "aaron-bond.better-comments",
+        "usernamehw.errorlens",
+        "kuba-p.glsl-lsp",
+        "dtoplak.vscode-glsllint",
+        "redmser.godot-hover-docs",
+        "slevesque.shader",
+        "eamodio.gitlens"
+    ]
+}
