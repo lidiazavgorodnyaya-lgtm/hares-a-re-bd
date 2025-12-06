@@ -66,6 +66,10 @@ folder_colors={
 "res://localization/": "green"
 }
 
+[internationalization]
+
+rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
+
 [layer_names]
 
 2d_render/layer_1="Игрок"
