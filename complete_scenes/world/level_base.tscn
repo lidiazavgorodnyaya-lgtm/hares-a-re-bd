@@ -22,7 +22,6 @@ script = ExtResource("1_ap5gr")
 
 [node name="WorldMetadata" type="Node" parent="."]
 script = ExtResource("2_abcfb")
-context_mode = null
 metadata/_custom_type_script = "uid://rrcahhioggsb"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
