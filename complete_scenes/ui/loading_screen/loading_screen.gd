@@ -1,18 +1,37 @@
 extends Control
 
 ## Загрузочный экран для перехода от одной сцены к другой.
+##
 ## Используется для загрузки тяжелых сцен.
 ## Не занимается сохранением состояний
 
+## Массив изображений, случайно выбираемых для показа
+@export var loading_images_array: MyImageArray
+## Подсказки игроку
+@export var game_tips_array: MyStringArray
+
+## На этой текстуре будут отображаться изображений загрузочного экрана
 @onready var texture_rect: TextureRect = $MarginContainer/VBoxContainer2/TextureRect
+
+##
 @onready var loading: Label = $MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer/Loading
+##
 @onready var progress_number: Label = $MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer/ProgressNumber
+##
 @onready var progress_bar: ProgressBar = $MarginContainer/VBoxContainer2/VBoxContainer/ProgressBar
+##
 @onready var timer: Timer = $Timer
+## Подсказки
 @onready var game_tips: RichTextLabel = %GameTips
 
 
 func _ready() -> void:
+#region случайных выбор изображений и подсказок
+	texture_rect.texture = loading_images_array.loading_images_array.pick_random()
+	game_tips.text = game_tips_array.game_tips_array.pick_random()
+
+#endregion
+
 	visible = false
 	# загружай ресурсы в фоновом режиме, пока текущая сцена работает
 	if SceneManager.next_scene == "":
@@ -23,17 +42,19 @@ func _ready() -> void:
 		if not ResourceLoader.exists(SceneManager.next_scene):
 			scene_failed_to_load(SceneManager.next_scene)
 			return
-## Можно удалить, только для проверки
+#region Можно удалить, только для проверки
+## итератор для того, чтобы проверить работу анимации загрузки
 var iter: float = 0
+#endregion
 
 
 func _process(_delta: float) -> void:
 	if SceneManager.next_scene == "":
-		# --Заполнитель, можно удалить--
+#region Заполнитель, можно удалить
 		progress_bar.value = floor(clamp(_delta+iter, 0, 100))
 		progress_number.text = str(floor(clamp(_delta+iter, 0, 100)))+"%"
 		iter +=0.1
-		# ------------------------------
+#endregion
 	else:
 		var progress: Array = []
 		ResourceLoader.load_threaded_get_status(SceneManager.next_scene, progress)
@@ -53,7 +74,8 @@ func scene_failed_to_load(scene_path: String) -> void:
 func scene_invalid(scene_path: String) -> void:
 	push_error("scene: '%s' is invalid" %[scene_path])
 ## Если сцена загрузилась нормально
-func scene_finished_loading(_scene_path: String) -> void:
+func scene_finished_loading(scene_path: String) -> void:
+	print("scene %s is loaded" %[scene_path])
 	pass
 
 ## Включаем видимость этой сцены, если игра загружается дольше

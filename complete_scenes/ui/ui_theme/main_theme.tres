@@ -21,7 +21,7 @@ bg_color = Color(0.21809414, 3.9106236e-08, 0.046828568, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_682gp"]
 
 [resource]
-Button/font_sizes/font_size = 79
+Button/font_sizes/font_size = 73
 Button/fonts/font = ExtResource("1_682gp")
 Button/styles/disabled = SubResource("StyleBoxFlat_d5rt5")
 Button/styles/focus = SubResource("StyleBoxFlat_682gp")
