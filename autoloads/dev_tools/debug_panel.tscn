@@ -1,0 +1,128 @@
+[gd_scene load_steps=3 format=3 uid="uid://q02bm3rwswjh"]
+
+[ext_resource type="Script" uid="uid://dc6y1klw7ce5w" path="res://autoloads/dev_tools/debug_panel.gd" id="1_0g135"]
+[ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guide/debugger/guide_debugger.tscn" id="2_1whln"]
+
+[node name="DebugPanel" type="CanvasLayer"]
+script = ExtResource("1_0g135")
+
+[node name="GuideDebugger" parent="." instance=ExtResource("2_1whln")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -146.0
+offset_bottom = 139.0
+grow_horizontal = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -842.0
+offset_bottom = 1077.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DebugInfo0" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo1" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo2" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo3" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo4" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo5" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo6" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo7" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo8" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo9" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo10" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo11" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo12" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo13" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo14" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
+
+[node name="DebugInfo15" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+horizontal_alignment = 2
