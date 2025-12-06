@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="MyStringArray" load_steps=2 format=3 uid="uid://ogy82ilutxda"]
 
-[ext_resource type="Script" uid="uid://dk2rg0nyklatw" path="res://complete_scenes/ui/loading_screen/loading_screen_resources/my_string_array_res.gd" id="1_8a80l"]
+[ext_resource type="Script" uid="uid://dk2rg0nyklatw" path="res://complete_scenes/ui/loading_screen/loading_screen_resources/my_string_array_res.gd" id="1_ptg8x"]
 
 [resource]
-script = ExtResource("1_8a80l")
+script = ExtResource("1_ptg8x")
 game_tips_array = Array[String](["Бей косых!	", "Персонаж умеет не только ходить на задних лапках, но и бегать и красться.
 
-Зажмите Ctrl для подкрадывания и Shift для бега", "Турели - твои союзники! Увеличь свою боевую мощь!"])
+Зажмите Ctrl для подкрадывания и Shift для бега", "Турели - твои союзники! Увеличь свою боевую мощь!", "Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique justo eleifend leo efficitur ridiculus natoque. Elit convallis purus ullamcorper tincidunt id, mi potenti. Bibendum tortor vestibulum suspendisse sodales sollicitudin metus integer leo. Sagittis id laoreet posuere aptent; integer bibendum urna. Elementum sagittis turpis iaculis scelerisque hac. Congue odio at proin cursus facilisis eu lobortis duis. Quam fringilla curabitur adipiscing egestas integer velit ornare eget amet. Proin potenti est placerat blandit lobortis mollis habitant.
+Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique justo eleifend leo efficitur ridiculus natoque. Elit convallis purus ullamcorper tincidunt id, mi potenti. Bibendum tortor vestibulum suspendisse sodales sollicitudin metus integer leo. Sagittis id laoreet posuere aptent; integer bibendum urna. Elementum sagittis turpis iaculis scelerisque hac. Congue odio at proin cursus facilisis eu lobortis duis. Quam fringilla curabitur adipiscing egestas integer velit ornare eget amet. Proin potenti est placerat blandit lobortis mollis habitant.
+Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique justo eleifend leo efficitur ridiculus natoque. Elit convallis purus ullamcorper tincidunt id, mi potenti. Bibendum tortor vestibulum suspendisse sodales sollicitudin metus integer leo. Sagittis id laoreet posuere aptent; integer bibendum urna. Elementum sagittis turpis iaculis scelerisque hac. Congue odio at proin cursus facilisis eu lobortis duis. Quam fringilla curabitur adipiscing egestas integer velit ornare eget amet. Proin potenti est placerat blandit lobortis mollis habitant.
+"])
 metadata/_custom_type_script = "uid://dk2rg0nyklatw"

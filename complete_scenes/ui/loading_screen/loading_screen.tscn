@@ -120,7 +120,7 @@ metadata/_edit_use_anchors_ = true
 [node name="ProgressNumber" type="Label" parent="MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme = ExtResource("1_txdk3")
+theme = ExtResource("4_v0med")
 text = "100%
 "
 metadata/_edit_use_anchors_ = true
