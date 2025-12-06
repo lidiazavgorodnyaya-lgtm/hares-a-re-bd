@@ -10,7 +10,7 @@ func _init():
 	name = "BeehavePlugin"
 	add_autoload_singleton("BeehaveGlobalMetrics", "metrics/beehave_global_metrics.gd")
 	add_autoload_singleton("BeehaveGlobalDebugger", "debug/global_debugger.gd")
-	
+
 	# Add project settings
 	if not ProjectSettings.has_setting("beehave/debugger/start_detached"):
 		ProjectSettings.set_setting("beehave/debugger/start_detached", false)
@@ -23,7 +23,7 @@ func _init():
 			"usage": PROPERTY_USAGE_DEFAULT
 		})
 		ProjectSettings.save()
-	
+
 	print("Beehave initialized!")
 
 
