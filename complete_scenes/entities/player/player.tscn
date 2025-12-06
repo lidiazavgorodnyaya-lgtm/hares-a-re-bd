@@ -139,6 +139,52 @@ delay_in_seconds = "0.2"
 
 [node name="PlayerMode" type="Node" parent="PlayerStateChart/Root"]
 script = ExtResource("4_hcnbt")
+initial_state = NodePath("BattleMode")
+
+[node name="BattleMode" type="Node" parent="PlayerStateChart/Root/PlayerMode"]
+script = ExtResource("5_t23pu")
+
+[node name="toNormalMode" type="Node" parent="PlayerStateChart/Root/PlayerMode/BattleMode"]
+script = ExtResource("6_cjfkd")
+to = NodePath("../../NormalMode")
+event = &"normal_mode"
+delay_in_seconds = "0.0"
+
+[node name="toCutsceneMode" type="Node" parent="PlayerStateChart/Root/PlayerMode/BattleMode"]
+script = ExtResource("6_cjfkd")
+to = NodePath("../../CutsceneMode")
+event = &"cutscene_mode"
+delay_in_seconds = "0.0"
+
+[node name="NormalMode" type="Node" parent="PlayerStateChart/Root/PlayerMode"]
+script = ExtResource("5_t23pu")
+
+[node name="toCutsceneMode" type="Node" parent="PlayerStateChart/Root/PlayerMode/NormalMode"]
+script = ExtResource("6_cjfkd")
+to = NodePath("../../CutsceneMode")
+event = &"cutscene_mode"
+delay_in_seconds = "0.0"
+
+[node name="toBattleMode" type="Node" parent="PlayerStateChart/Root/PlayerMode/NormalMode"]
+script = ExtResource("6_cjfkd")
+to = NodePath("../../BattleMode")
+event = &"battle_mode"
+delay_in_seconds = "0.0"
+
+[node name="CutsceneMode" type="Node" parent="PlayerStateChart/Root/PlayerMode"]
+script = ExtResource("5_t23pu")
+
+[node name="toNormalMode" type="Node" parent="PlayerStateChart/Root/PlayerMode/CutsceneMode"]
+script = ExtResource("6_cjfkd")
+to = NodePath("../../NormalMode")
+event = &"normal_mode"
+delay_in_seconds = "0.0"
+
+[node name="toBattleMode" type="Node" parent="PlayerStateChart/Root/PlayerMode/CutsceneMode"]
+script = ExtResource("6_cjfkd")
+to = NodePath("../../BattleMode")
+event = &"battle_mode"
+delay_in_seconds = "0.0"
 
 [node name="PlayerCondition" type="Node" parent="PlayerStateChart/Root"]
 script = ExtResource("4_hcnbt")
