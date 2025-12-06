@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_4k8fl")
+display_category = "in_battle"
 metadata/_custom_type_script = "uid://cluhc11vixkf1"
