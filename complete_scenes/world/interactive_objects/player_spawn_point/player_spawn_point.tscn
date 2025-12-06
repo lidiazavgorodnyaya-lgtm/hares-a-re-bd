@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://trq4sto8ygvn"]
+
+[ext_resource type="Script" uid="uid://gtfxbuq82v33" path="res://complete_scenes/world/interactive_objects/player_spawn_point/player_spawn_point.gd" id="1_pgmo0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pgmo0"]
+
+[node name="PlayerSpawnPoint" type="Node2D"]
+script = ExtResource("1_pgmo0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pgmo0")
