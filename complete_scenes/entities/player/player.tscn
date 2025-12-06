@@ -137,6 +137,22 @@ script = ExtResource("6_cjfkd")
 to = NodePath("../../Idle")
 delay_in_seconds = "0.2"
 
+[node name="PlayerMode" type="Node" parent="PlayerStateChart/Root"]
+script = ExtResource("4_hcnbt")
+
+[node name="PlayerCondition" type="Node" parent="PlayerStateChart/Root"]
+script = ExtResource("4_hcnbt")
+initial_state = NodePath("FullHealth")
+
+[node name="FullHealth" type="Node" parent="PlayerStateChart/Root/PlayerCondition"]
+script = ExtResource("5_t23pu")
+
+[node name="MiddleState" type="Node" parent="PlayerStateChart/Root/PlayerCondition"]
+script = ExtResource("5_t23pu")
+
+[node name="LowHealth" type="Node" parent="PlayerStateChart/Root/PlayerCondition"]
+script = ExtResource("5_t23pu")
+
 [node name="EntityCollision" parent="." instance=ExtResource("7_hcnbt")]
 shape = SubResource("CircleShape2D_t23pu")
 
