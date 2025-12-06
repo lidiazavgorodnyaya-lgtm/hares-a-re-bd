@@ -67,6 +67,7 @@ layout_mode = 2
 text = "Начать игру"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Settings" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]

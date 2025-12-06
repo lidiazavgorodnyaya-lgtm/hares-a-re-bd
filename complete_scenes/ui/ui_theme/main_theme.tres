@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://ck3lqv73gdnwl"]
 
-[ext_resource type="FontFile" uid="uid://b7wl6y6lhts57" path="res://assets/fonts/Da Vinci Script.ttf" id="1_682gp"]
+[ext_resource type="FontFile" uid="uid://bbly8g5hv0mvk" path="res://assets/fonts/wolgadeutsche/Wolgadeutsche.otf" id="1_682gp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5rt5"]
 bg_color = Color(0, 0, 0, 1)
@@ -21,14 +21,14 @@ bg_color = Color(0.21809414, 3.9106236e-08, 0.046828568, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_682gp"]
 
 [resource]
-Button/font_sizes/font_size = 73
+Button/font_sizes/font_size = 79
 Button/fonts/font = ExtResource("1_682gp")
 Button/styles/disabled = SubResource("StyleBoxFlat_d5rt5")
 Button/styles/focus = SubResource("StyleBoxFlat_682gp")
 Button/styles/hover = SubResource("StyleBoxFlat_3wxkr")
 Button/styles/normal = SubResource("StyleBoxFlat_dvbco")
 Button/styles/pressed = SubResource("StyleBoxFlat_0vxml")
-GridContainer/constants/v_separation = 8
+GridContainer/constants/v_separation = 52
 Label/font_sizes/font_size = 26
 Label/fonts/font = ExtResource("1_682gp")
 MarginContainer/constants/margin_bottom = 5
