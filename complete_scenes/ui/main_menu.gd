@@ -2,7 +2,7 @@ extends Control
 
 
 ## Куда игрок должен переходить, после нажатия кнопки играть
-@export_file("*.tscn") var game_scene_path : String = ""
+@export_file("*.tscn") var game_scene_path : String = "uid://dkar06pst402u"
 
 
 func _on_start_pressed() -> void:

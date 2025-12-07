@@ -15,7 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vy6ls")
-game_scene_path = "uid://b2ptp60qptf3r"
 
 [node name="WorldMetadata" type="Node" parent="."]
 script = ExtResource("5_6uyg3")
