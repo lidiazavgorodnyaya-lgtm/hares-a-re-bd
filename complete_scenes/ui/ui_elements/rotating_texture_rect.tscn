@@ -8,7 +8,7 @@
 process_mode = 3
 offset_right = 128.0
 offset_bottom = 128.0
-rotation = 1.226764
+rotation = 3.143936
 pivot_offset = Vector2(64, 64)
 size_flags_horizontal = 4
 size_flags_vertical = 4
