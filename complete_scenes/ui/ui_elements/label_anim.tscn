@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b46sbocbkfosb"]
+
+[ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="1_2o1xt"]
+[ext_resource type="Script" uid="uid://cq238cp25jt1y" path="res://complete_scenes/ui/ui_elements/label_anim.gd" id="1_g84bc"]
+
+[node name="LabelAnim" type="Label"]
+editor_description = "Отображает анимацию добавления или удаления значений"
+z_index = 4096
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("1_2o1xt")
+text = "90000.0"
+script = ExtResource("1_g84bc")

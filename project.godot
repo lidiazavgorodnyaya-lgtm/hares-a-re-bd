@@ -17,6 +17,7 @@ config/description="ГеймДжем ФКН 2
 https://cs.hse.ru/gamejam/2025/"
 run/main_scene="uid://bxvpx0511unt"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/image="uid://5x7607t2q5bm"
 config/icon="res://assets/icon.svg"
 
 [audio]
@@ -61,8 +62,12 @@ folder_colors={
 "res://addons/": "gray",
 "res://assets/": "red",
 "res://autoloads/": "gray",
-"res://complete_scenes/ui/ui_theme/": "red",
+"res://complete_scenes/ui/loading_screen/loading_screen_images/": "red",
+"res://complete_scenes/ui/loading_screen/loading_screen_resources/": "teal",
+"res://complete_scenes/ui/ui_elements/cogs/cog_textures/": "red",
+"res://complete_scenes/ui/ui_theme/": "teal",
 "res://config/": "gray",
+"res://config/input_actions/": "teal",
 "res://docs/": "purple",
 "res://godot_state_charts_examples/": "pink",
 "res://guide_examples/": "pink",

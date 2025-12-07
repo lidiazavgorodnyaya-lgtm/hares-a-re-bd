@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guide/debugger/guide_debugger.tscn" id="2_1whln"]
 
 [node name="DebugPanel" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_0g135")
 
 [node name="GuideDebugger" parent="." instance=ExtResource("2_1whln")]

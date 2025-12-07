@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://c8bg20psr0b4n"]
+
+[ext_resource type="Texture2D" uid="uid://brt5k54n5g3a5" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs12.png" id="1_x721o"]
+[ext_resource type="Texture2D" uid="uid://ce0vucpsenf7u" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n12.png" id="2_nihoc"]
+
+[resource]
+diffuse_texture = ExtResource("1_x721o")
+normal_texture = ExtResource("2_nihoc")

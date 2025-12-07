@@ -1,0 +1,106 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwj01chvfaahq"]
+
+[ext_resource type="Script" uid="uid://02hipmfv8evm" path="res://complete_scenes/ui/ui_elements/planet_card_jungle.gd" id="1_3qean"]
+[ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="2_ecev8"]
+[ext_resource type="SpriteFrames" uid="uid://dn26xtxg3miui" path="res://complete_scenes/ui/ui_elements/spriteframes_jungle_planet.tres" id="3_3qean"]
+[ext_resource type="Texture2D" uid="uid://cpu7upv6bxcun" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs3.png" id="8_2q4fd"]
+[ext_resource type="Texture2D" uid="uid://bk6mn0v36p4tu" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n3.png" id="9_lamiy"]
+[ext_resource type="PackedScene" uid="uid://l1lvcjfa8uyy" path="res://complete_scenes/ui/ui_elements/rotating_texture_rect.tscn" id="10_82avr"]
+[ext_resource type="Texture2D" uid="uid://ci4vbjvi3hcp7" path="res://complete_scenes/ui/ui_elements/cogs/cog_rotated_2.tres" id="11_vv6ok"]
+[ext_resource type="Texture2D" uid="uid://bykplg8w2nmkd" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs13.png" id="26_yc32m"]
+[ext_resource type="Texture2D" uid="uid://ds2tm0lhhbksy" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n13.png" id="27_dc2qa"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_282px"]
+diffuse_texture = ExtResource("8_2q4fd")
+normal_texture = ExtResource("9_lamiy")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pkipb"]
+diffuse_texture = ExtResource("26_yc32m")
+normal_texture = ExtResource("27_dc2qa")
+
+[node name="PlanetCardJungle" type="Button"]
+offset_right = 550.0
+offset_bottom = 743.0
+flat = true
+script = ExtResource("1_3qean")
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("2_ecev8")
+
+[node name="PlanetAnim" type="AnimatedSprite2D" parent="."]
+show_behind_parent = true
+light_mask = 524288
+z_index = 1
+position = Vector2(274.00003, 203.00002)
+scale = Vector2(2.5618937, 2.5618937)
+sprite_frames = ExtResource("3_3qean")
+
+[node name="Description" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 404.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("2_ecev8")
+bbcode_enabled = true
+text = "[center][font_size=90][font=res://assets/fonts/TD Zvonar/TD Zvonar.otf][tornado radius=2 freq=2][wave amp=1.0 freq=-1.0 connected=1][color=#275e21]Мир Джунглей[/color][/wave][/tornado][/font][/font_size][/center]
+
+[center][font_size=30][font=res://assets/fonts/TD Zvonar/TD Zvonar.otf][tornado radius=2 freq=2][color=#275e21] ◆◇◆◇◆[/color][/tornado][/font][/font_size][/center]
+
+
+"
+
+[node name="StaticCogs" type="Node2D" parent="."]
+
+[node name="CogStatic3" type="Sprite2D" parent="StaticCogs"]
+position = Vector2(131, 622)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_282px")
+
+[node name="CogStatic9" type="Sprite2D" parent="StaticCogs"]
+position = Vector2(419, 127)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_pkipb")
+
+[node name="RotatedCogs" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="RotatingTextureRect" parent="RotatedCogs" instance=ExtResource("10_82avr")]
+layout_mode = 0
+offset_left = 107.99997
+offset_top = 244.99997
+offset_right = 235.99997
+offset_bottom = 372.99997
+rotation = 1.0196484
+
+[node name="RotatingTextureRect2" parent="RotatedCogs" instance=ExtResource("10_82avr")]
+layout_mode = 0
+offset_left = 238.00002
+offset_top = -9.999985
+offset_right = 366.0
+offset_bottom = 118.000015
+rotation = 4.439745
+pivot_offset = Vector2(63.999992, 64)
+texture = ExtResource("11_vv6ok")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

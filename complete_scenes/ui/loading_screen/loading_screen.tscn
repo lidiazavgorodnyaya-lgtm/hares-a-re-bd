@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bijcjwcldnokn"]
+[gd_scene load_steps=12 format=3 uid="uid://bijcjwcldnokn"]
 
 [ext_resource type="Theme" uid="uid://dot0gi1yoqmrl" path="res://guide_examples/shared/ui_theme.tres" id="1_txdk3"]
 [ext_resource type="Script" uid="uid://dwvaol08dkye4" path="res://complete_scenes/ui/loading_screen/loading_screen.gd" id="2_63o87"]
-[ext_resource type="Texture2D" uid="uid://brjpgtkba5dw7" path="res://assets/icon.svg" id="3_2k02q"]
+[ext_resource type="Resource" uid="uid://bdd3d1u2kimt6" path="res://complete_scenes/ui/loading_screen/loading_screen_resources/loading_screen.tres" id="3_numvi"]
+[ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="4_v0med"]
 [ext_resource type="Script" uid="uid://s7k3fpn3bkx8" path="res://complete_scenes/ui/loading_screen/progress_bar.gd" id="5_50x38"]
+[ext_resource type="FontFile" uid="uid://b8igu6fawyqyg" path="res://assets/fonts/stieglitz_SP/Stieglitz SP/StieglitzSP-Bold 2.otf" id="5_hg0mh"]
+[ext_resource type="Texture2D" uid="uid://csaf24pxdomwi" path="res://complete_scenes/ui/loading_screen/loading_screen_images/photo_2025-12-05_21-59-32.jpg" id="5_wky1i"]
+[ext_resource type="Resource" uid="uid://ogy82ilutxda" path="res://complete_scenes/ui/loading_screen/loading_screen_resources/game_tips.tres" id="6_ohlu2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rqqyj"]
 
@@ -27,6 +31,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_txdk3")
 script = ExtResource("2_63o87")
+loading_images_array = ExtResource("3_numvi")
+game_tips_array = ExtResource("6_ohlu2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -61,8 +67,9 @@ layout_mode = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("3_2k02q")
+texture = ExtResource("5_wky1i")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
@@ -91,6 +98,8 @@ editor_description = "Подсказки и другая полезная инф
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("4_v0med")
+theme_override_fonts/normal_font = ExtResource("5_hg0mh")
 bbcode_enabled = true
 text = "Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique justo eleifend leo efficitur ridiculus natoque. Elit convallis purus ullamcorper tincidunt id, mi potenti. Bibendum tortor vestibulum suspendisse sodales sollicitudin metus integer leo. Sagittis id laoreet posuere aptent; integer bibendum urna. Elementum sagittis turpis iaculis scelerisque hac. Congue odio at proin cursus facilisis eu lobortis duis. Quam fringilla curabitur adipiscing egestas integer velit ornare eget amet. Proin potenti est placerat blandit lobortis mollis habitant.
 Lorem ipsum odor amet, consectetuer adipiscing elit. Tristique justo eleifend leo efficitur ridiculus natoque. Elit convallis purus ullamcorper tincidunt id, mi potenti. Bibendum tortor vestibulum suspendisse sodales sollicitudin metus integer leo. Sagittis id laoreet posuere aptent; integer bibendum urna. Elementum sagittis turpis iaculis scelerisque hac. Congue odio at proin cursus facilisis eu lobortis duis. Quam fringilla curabitur adipiscing egestas integer velit ornare eget amet. Proin potenti est placerat blandit lobortis mollis habitant.
@@ -104,14 +113,14 @@ layout_mode = 2
 [node name="Loading" type="Label" parent="MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_txdk3")
+theme = ExtResource("4_v0med")
 text = "Загрузка ..."
 metadata/_edit_use_anchors_ = true
 
 [node name="ProgressNumber" type="Label" parent="MarginContainer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme = ExtResource("1_txdk3")
+theme = ExtResource("4_v0med")
 text = "100%
 "
 metadata/_edit_use_anchors_ = true
@@ -133,9 +142,7 @@ script = ExtResource("5_50x38")
 editor_description = "Таймер нужен для того, чтобы не запускать полоску загрузки, если сцена загружается быстрее чем время таймера.
 
 "
-wait_time = 0.2
 one_shot = true
 autostart = true
 
-[connection signal="changed" from="MarginContainer/VBoxContainer2/VBoxContainer/ProgressBar" to="MarginContainer/VBoxContainer2/VBoxContainer/ProgressBar" method="_on_changed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MyImageArray" load_steps=5 format=3 uid="uid://bdd3d1u2kimt6"]
+
+[ext_resource type="Texture2D" uid="uid://bipjeg52a78ax" path="res://complete_scenes/ui/loading_screen/loading_screen_images/image_2025-12-05_16-23-11.png" id="1_pvfpn"]
+[ext_resource type="Texture2D" uid="uid://b5ccxx0x35ami" path="res://complete_scenes/ui/loading_screen/loading_screen_images/image_2025-12-05_16-45-55.png" id="2_1rtgy"]
+[ext_resource type="Texture2D" uid="uid://csaf24pxdomwi" path="res://complete_scenes/ui/loading_screen/loading_screen_images/photo_2025-12-05_21-59-32.jpg" id="3_qw3a8"]
+[ext_resource type="Script" uid="uid://ynb4auaicxvj" path="res://complete_scenes/ui/loading_screen/loading_screen_resources/my_image_array_res.gd" id="4_pvfpn"]
+
+[resource]
+script = ExtResource("4_pvfpn")
+loading_images_array = Array[CompressedTexture2D]([ExtResource("1_pvfpn"), ExtResource("2_1rtgy"), ExtResource("3_qw3a8")])
+metadata/_custom_type_script = "uid://ynb4auaicxvj"
