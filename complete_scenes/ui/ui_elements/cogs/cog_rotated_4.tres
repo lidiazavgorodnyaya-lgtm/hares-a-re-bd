@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://ck5i8w8h323nt"]
+
+[ext_resource type="Texture2D" uid="uid://bxlrws4yrhf2c" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/Sprite-0003.png" id="1_1tawd"]
+[ext_resource type="Texture2D" uid="uid://cgkv0n4xv7md7" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/Sprite-0004.png" id="2_87b83"]
+
+[resource]
+diffuse_texture = ExtResource("1_1tawd")
+normal_texture = ExtResource("2_87b83")
