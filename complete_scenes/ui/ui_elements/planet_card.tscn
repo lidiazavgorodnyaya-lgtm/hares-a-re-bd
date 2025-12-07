@@ -1,0 +1,547 @@
+[gd_scene load_steps=57 format=3 uid="uid://b3rlnoso5suwi"]
+
+[ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="1_iyaol"]
+[ext_resource type="SpriteFrames" uid="uid://bp7pvq3x3kgwc" path="res://complete_scenes/ui/ui_elements/spriteframes_water_planet.tres" id="1_wf14p"]
+[ext_resource type="Script" uid="uid://jpt5wkyp7mrf" path="res://complete_scenes/ui/ui_elements/planet_card.gd" id="2_iieva"]
+[ext_resource type="Texture2D" uid="uid://dx4vvn0pjdf38" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs1.png" id="4_4pire"]
+[ext_resource type="Texture2D" uid="uid://br8epb2f4jest" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n1.png" id="5_ra5vh"]
+[ext_resource type="Texture2D" uid="uid://b854d03cqgu15" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs2.png" id="6_ocfa4"]
+[ext_resource type="Texture2D" uid="uid://chsdpy3wjy2qx" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n2.png" id="7_gv1bd"]
+[ext_resource type="Texture2D" uid="uid://cpu7upv6bxcun" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs3.png" id="8_mgpko"]
+[ext_resource type="Texture2D" uid="uid://bk6mn0v36p4tu" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n3.png" id="9_tclwo"]
+[ext_resource type="Texture2D" uid="uid://q73b15tjun6d" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs4.png" id="10_jn3dk"]
+[ext_resource type="Texture2D" uid="uid://xy76w3x0bg48" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n4.png" id="11_cdess"]
+[ext_resource type="Texture2D" uid="uid://d0j35qvuyl4ek" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs5.png" id="12_i5gtn"]
+[ext_resource type="Texture2D" uid="uid://5li1wvi520o0" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n5.png" id="13_0c2fd"]
+[ext_resource type="Texture2D" uid="uid://by2d6ikr5pir1" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs6.png" id="14_r7tx3"]
+[ext_resource type="Texture2D" uid="uid://doi7ihh2neutv" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n6.png" id="15_vqw28"]
+[ext_resource type="Texture2D" uid="uid://bg8mw257mo2hc" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs7.png" id="16_16p87"]
+[ext_resource type="Texture2D" uid="uid://cqoktrc44wvyp" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n7.png" id="17_8vkba"]
+[ext_resource type="Texture2D" uid="uid://cxxlpam20itk0" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs8.png" id="18_4gu56"]
+[ext_resource type="Texture2D" uid="uid://cxc2u432g2iqf" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n8.png" id="19_6tqg2"]
+[ext_resource type="Texture2D" uid="uid://btbh2nwt8orvd" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs9.png" id="20_eafyg"]
+[ext_resource type="Texture2D" uid="uid://cfb1txkw0usly" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n9.png" id="21_h6rri"]
+[ext_resource type="Texture2D" uid="uid://2ff0ddg70j53" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs11.png" id="22_eafyg"]
+[ext_resource type="Texture2D" uid="uid://dardit2rjlix1" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n10.png" id="23_h6rri"]
+[ext_resource type="Texture2D" uid="uid://brt5k54n5g3a5" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs12.png" id="24_wbl6g"]
+[ext_resource type="Texture2D" uid="uid://ce0vucpsenf7u" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n12.png" id="25_rfttp"]
+[ext_resource type="Texture2D" uid="uid://bykplg8w2nmkd" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs13.png" id="26_wbl6g"]
+[ext_resource type="Texture2D" uid="uid://ds2tm0lhhbksy" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n13.png" id="27_rfttp"]
+[ext_resource type="Texture2D" uid="uid://bnenoq8iuq8a6" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs14.png" id="28_w21bu"]
+[ext_resource type="Texture2D" uid="uid://5kuk1xticgjl" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n14.png" id="29_7hfhg"]
+[ext_resource type="Texture2D" uid="uid://bx3esoxhvib3h" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs15.png" id="30_1a11v"]
+[ext_resource type="Texture2D" uid="uid://8uemnehdtgyw" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n15.png" id="31_4rxiq"]
+[ext_resource type="Texture2D" uid="uid://d2evwhoyutg5t" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_Steampunk_Cogs16.png" id="32_81rdf"]
+[ext_resource type="Texture2D" uid="uid://h7byw0dipcio" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/32x32_nnSteampunk_Cogs_n16.png" id="33_can61"]
+[ext_resource type="Texture2D" uid="uid://mnivx7wj0afn" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/Sprite-0001.png" id="34_nw3bq"]
+[ext_resource type="Texture2D" uid="uid://b5x0m3f2gv2l8" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/Sprite-0002.png" id="35_v67wx"]
+[ext_resource type="Texture2D" uid="uid://bxlrws4yrhf2c" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/Sprite-0003.png" id="36_kgynd"]
+[ext_resource type="Texture2D" uid="uid://cgkv0n4xv7md7" path="res://complete_scenes/ui/ui_elements/cogs/cog_textures/Sprite-0004.png" id="37_rw33t"]
+[ext_resource type="Script" uid="uid://drn0toocsmfax" path="res://addons/better_vircle/vircle_node.gd" id="38_7hfhg"]
+[ext_resource type="Texture2D" uid="uid://cpe3vo42n71nh" path="res://assets/textures/effects/sparkle.png" id="39_1a11v"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1a11v"]
+diffuse_texture = ExtResource("4_4pire")
+normal_texture = ExtResource("5_ra5vh")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4rxiq"]
+diffuse_texture = ExtResource("6_ocfa4")
+normal_texture = ExtResource("7_gv1bd")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_81rdf"]
+diffuse_texture = ExtResource("8_mgpko")
+normal_texture = ExtResource("9_tclwo")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_can61"]
+diffuse_texture = ExtResource("10_jn3dk")
+normal_texture = ExtResource("11_cdess")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nw3bq"]
+diffuse_texture = ExtResource("14_r7tx3")
+normal_texture = ExtResource("15_vqw28")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_v67wx"]
+diffuse_texture = ExtResource("16_16p87")
+normal_texture = ExtResource("17_8vkba")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kgynd"]
+diffuse_texture = ExtResource("20_eafyg")
+normal_texture = ExtResource("21_h6rri")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rw33t"]
+diffuse_texture = ExtResource("24_wbl6g")
+normal_texture = ExtResource("25_rfttp")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xtkvg"]
+diffuse_texture = ExtResource("26_wbl6g")
+normal_texture = ExtResource("27_rfttp")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cloxi"]
+diffuse_texture = ExtResource("30_1a11v")
+normal_texture = ExtResource("31_4rxiq")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_w3u5u"]
+diffuse_texture = ExtResource("32_81rdf")
+normal_texture = ExtResource("33_can61")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fo8s0"]
+diffuse_texture = ExtResource("18_4gu56")
+normal_texture = ExtResource("19_6tqg2")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3bgpk"]
+diffuse_texture = ExtResource("12_i5gtn")
+normal_texture = ExtResource("13_0c2fd")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8shuv"]
+diffuse_texture = ExtResource("22_eafyg")
+normal_texture = ExtResource("23_h6rri")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rear2"]
+diffuse_texture = ExtResource("36_kgynd")
+normal_texture = ExtResource("37_rw33t")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f7qdh"]
+diffuse_texture = ExtResource("34_nw3bq")
+normal_texture = ExtResource("35_v67wx")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qsg56"]
+diffuse_texture = ExtResource("28_w21bu")
+normal_texture = ExtResource("29_7hfhg")
+
+[node name="PlanetCard" type="Button"]
+offset_right = 550.0
+offset_bottom = 743.0
+flat = true
+script = ExtResource("2_iieva")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_iyaol")
+
+[node name="PlanetAnim" type="AnimatedSprite2D" parent="."]
+show_behind_parent = true
+light_mask = 524288
+z_index = 1
+position = Vector2(274.00003, 203.00002)
+scale = Vector2(2.5618937, 2.5618937)
+sprite_frames = ExtResource("1_wf14p")
+frame_progress = 0.23702149
+
+[node name="Description" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 404.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_iyaol")
+bbcode_enabled = true
+text = "[center][font_size=90][font=res://assets/fonts/TD Zvonar/TD Zvonar.otf][wave amp=1.0 freq=-1.0 connected=1][color=RED]Водный мир[/color][/wave][/font][/font_size][/center][center][font_size=30][font=res://assets/fonts/TD Zvonar/TD Zvonar.otf][wave amp=1.0 freq=-1.0 connected=1][color=CORNFLOWER_BLUE]⫷⨮⁜⨭⫸[/color][/wave][/font][/font_size][/center]
+
+[p][center][wave amp=1.0 freq=-1.0 connected=1][color=CORNFLOWER_BLUE] ︵‿︵‿︵‿︵[/color][/wave][/center] [/p]
+[center][wave amp=1.0 freq=-1.0 connected=1][color=CORNFLOWER_BLUE] ◆◇◆◇◆[/color][/wave][/center]
+
+
+"
+
+[node name="Vircle" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 254.0
+offset_top = 492.0
+offset_right = 294.0
+offset_bottom = 532.0
+rotation = 731.4723
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+radius = 299.625
+rotation_speed = 0.675
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="TextureRect" type="TextureRect" parent="Vircle"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 255.625
+offset_top = -44.0
+offset_right = 383.625
+offset_bottom = 84.0
+rotation = -731.4723
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("39_1a11v")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Vircle/TextureRect"]
+position = Vector2(65.000015, 64.000015)
+scale = Vector2(1.2283046, 1.2283046)
+color = Color(1, 0.9953333, 0.86, 1)
+energy = 7.44
+texture = ExtResource("39_1a11v")
+
+[node name="TextureRect2" type="TextureRect" parent="Vircle"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 48.58921
+offset_top = 240.96033
+offset_right = 176.5892
+offset_bottom = 368.96033
+rotation = -731.4723
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("39_1a11v")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Vircle/TextureRect2"]
+position = Vector2(65.000015, 64.000015)
+scale = Vector2(1.2283046, 1.2283046)
+color = Color(1, 0.9953333, 0.86, 1)
+energy = 7.44
+texture = ExtResource("39_1a11v")
+
+[node name="TextureRect3" type="TextureRect" parent="Vircle"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -286.40173
+offset_top = 132.11514
+offset_right = -158.40173
+offset_bottom = 260.11514
+rotation = -731.4723
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("39_1a11v")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Vircle/TextureRect3"]
+position = Vector2(65.000015, 64.000015)
+scale = Vector2(1.2283046, 1.2283046)
+color = Color(1, 0.9953333, 0.86, 1)
+energy = 7.44
+texture = ExtResource("39_1a11v")
+
+[node name="TextureRect4" type="TextureRect" parent="Vircle"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -286.4017
+offset_top = -220.11519
+offset_right = -158.4017
+offset_bottom = -92.11519
+rotation = -731.4723
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("39_1a11v")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Vircle/TextureRect4"]
+position = Vector2(65.000015, 64.000015)
+scale = Vector2(1.2283046, 1.2283046)
+color = Color(1, 0.9953333, 0.86, 1)
+energy = 7.44
+texture = ExtResource("39_1a11v")
+
+[node name="TextureRect5" type="TextureRect" parent="Vircle"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 48.589256
+offset_top = -328.9603
+offset_right = 176.58926
+offset_bottom = -200.9603
+rotation = -731.4723
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("39_1a11v")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Vircle/TextureRect5"]
+position = Vector2(65.000015, 64.000015)
+scale = Vector2(1.2283046, 1.2283046)
+color = Color(1, 0.9953333, 0.86, 1)
+energy = 7.44
+texture = ExtResource("39_1a11v")
+
+[node name="StaticCogs" type="Node2D" parent="."]
+
+[node name="CogStatic" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(17.000002, 719)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_1a11v")
+
+[node name="CogStatic2" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_4rxiq")
+
+[node name="CogStatic3" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(534, 719)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_81rdf")
+
+[node name="CogStatic4" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(472, 729)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_can61")
+
+[node name="CogStatic5" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(107, 728)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_nw3bq")
+
+[node name="CogStatic6" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(18, 628)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_v67wx")
+
+[node name="CogStatic7" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(381, 722)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_kgynd")
+
+[node name="CogStatic8" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(39, 454)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_rw33t")
+
+[node name="CogStatic9" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(113, 562)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_xtkvg")
+
+[node name="CogStatic10" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(220, 730)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_cloxi")
+
+[node name="CogStatic11" type="Sprite2D" parent="StaticCogs"]
+texture_filter = 1
+position = Vector2(551, 629)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_w3u5u")
+
+[node name="RotatedCogs" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Vircle2" type="Control" parent="RotatedCogs"]
+custom_minimum_size = Vector2(1.455, 2.235)
+anchors_preset = 0
+offset_left = 894.0
+offset_top = -441.0
+offset_right = 934.0
+offset_bottom = -401.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="Panel" type="Panel" parent="RotatedCogs/Vircle2"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 1
+
+[node name="Sprite2D8" type="Sprite2D" parent="RotatedCogs/Vircle2/Panel"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(20, 20)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_fo8s0")
+
+[node name="Vircle8" type="Control" parent="RotatedCogs"]
+custom_minimum_size = Vector2(1.455, 2.235)
+anchors_preset = 0
+offset_left = 1313.0
+offset_top = -407.0
+offset_right = 1353.0
+offset_bottom = -367.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="Panel" type="Panel" parent="RotatedCogs/Vircle8"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 1
+
+[node name="Sprite2D5" type="Sprite2D" parent="RotatedCogs/Vircle8/Panel"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(20, 20)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_3bgpk")
+
+[node name="Vircle9" type="Control" parent="RotatedCogs"]
+custom_minimum_size = Vector2(1.455, 2.235)
+anchors_preset = 0
+offset_left = 734.0
+offset_top = -266.0
+offset_right = 774.0
+offset_bottom = -226.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="Panel" type="Panel" parent="RotatedCogs/Vircle9"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 1
+
+[node name="Sprite2D10" type="Sprite2D" parent="RotatedCogs/Vircle9/Panel"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(20, 20)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_8shuv")
+
+[node name="Vircle10" type="Control" parent="RotatedCogs"]
+custom_minimum_size = Vector2(1.455, 2.235)
+anchors_preset = 0
+offset_left = 977.0
+offset_top = -206.0
+offset_right = 1017.0
+offset_bottom = -166.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="Panel" type="Panel" parent="RotatedCogs/Vircle10"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 1
+
+[node name="Sprite2D17" type="Sprite2D" parent="RotatedCogs/Vircle10/Panel"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(21, 21)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_rear2")
+
+[node name="Vircle11" type="Control" parent="RotatedCogs"]
+custom_minimum_size = Vector2(1.455, 2.235)
+anchors_preset = 0
+offset_left = 1164.0
+offset_top = -236.0
+offset_right = 1204.0
+offset_bottom = -196.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="Panel" type="Panel" parent="RotatedCogs/Vircle11"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 1
+
+[node name="Sprite2D16" type="Sprite2D" parent="RotatedCogs/Vircle11/Panel"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(20, 20)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_f7qdh")
+
+[node name="Vircle12" type="Control" parent="RotatedCogs"]
+custom_minimum_size = Vector2(1.455, 2.235)
+anchors_preset = 0
+offset_left = 1061.0
+offset_top = 195.0
+offset_right = 1101.0
+offset_bottom = 235.0
+pivot_offset = Vector2(20, 20)
+script = ExtResource("38_7hfhg")
+metadata/_custom_type_script = "uid://drn0toocsmfax"
+
+[node name="Panel" type="Panel" parent="RotatedCogs/Vircle12"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+mouse_filter = 1
+
+[node name="Sprite2D13" type="Sprite2D" parent="RotatedCogs/Vircle12/Panel"]
+z_as_relative = false
+texture_filter = 1
+position = Vector2(20, 21)
+scale = Vector2(8, 8)
+texture = SubResource("CanvasTexture_qsg56")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
