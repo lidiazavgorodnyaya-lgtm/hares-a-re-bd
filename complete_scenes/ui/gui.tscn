@@ -80,7 +80,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel5" type="Panel" parent="Control"]
+[node name="Эмоции" type="Panel" parent="Control"]
 layout_mode = 0
 offset_left = 1279.0
 offset_top = 973.0
@@ -89,7 +89,7 @@ offset_bottom = 1056.0
 theme = ExtResource("1_udnkd")
 metadata/_edit_group_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel5"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Эмоции"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,7 +97,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel6" type="Panel" parent="Control"]
+[node name="Карта или задания" type="Panel" parent="Control"]
 layout_mode = 0
 offset_left = 660.0
 offset_top = 8.0
@@ -106,7 +106,7 @@ offset_bottom = 162.0
 theme = ExtResource("1_udnkd")
 metadata/_edit_group_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel6"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Карта или задания"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
