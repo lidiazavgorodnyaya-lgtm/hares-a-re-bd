@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://elvtq0w3ejo7"]
+
+[ext_resource type="Shader" uid="uid://bykk57hxyfkrc" path="res://complete_scenes/ui/main_menu_doom-like_melting.gdshader" id="1_a0qnk"]
+
+[resource]
+shader = ExtResource("1_a0qnk")
+shader_parameter/subdivisions = 997
+shader_parameter/movement = 0.0

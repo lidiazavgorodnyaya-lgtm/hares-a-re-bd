@@ -1,13 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxvpx0511unt"]
+[gd_scene load_steps=9 format=3 uid="uid://bxvpx0511unt"]
 
+[ext_resource type="Material" uid="uid://elvtq0w3ejo7" path="res://complete_scenes/ui/main_menu_doom-like_melting.tres" id="1_pn8es"]
 [ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="1_uhymq"]
 [ext_resource type="Script" uid="uid://b75gis1627wkl" path="res://complete_scenes/ui/main_menu.gd" id="1_vy6ls"]
 [ext_resource type="LabelSettings" uid="uid://cue3k7t74c58x" path="res://complete_scenes/ui/ui_theme/title_label_settings.tres" id="2_lk8p1"]
 [ext_resource type="PackedScene" uid="uid://ctojs5873o1f5" path="res://complete_scenes/ui/ui_elements/custom_button.tscn" id="2_rxbl0"]
 [ext_resource type="Script" uid="uid://rrcahhioggsb" path="res://complete_scenes/world/world_metadta.gd" id="5_6uyg3"]
 [ext_resource type="Resource" uid="uid://duag7720owfq8" path="res://config/input_actions/context_in_menu.tres" id="6_pn8es"]
+[ext_resource type="Script" uid="uid://bop73kxi0jt8t" path="res://complete_scenes/ui/sub_viewport_container.gd" id="6_r3jnv"]
 
 [node name="MainMenu" type="Control"]
+material = ExtResource("1_pn8es")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +33,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = ExtResource("1_pn8es")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,19 +42,43 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_uhymq")
+script = ExtResource("6_r3jnv")
 
-[node name="Version" type="Label" parent="MarginContainer"]
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Background" type="ColorRect" parent="SubViewportContainer/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078833334, 0, 0.11, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uhymq")
+
+[node name="Version" type="Label" parent="SubViewportContainer/SubViewport/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 theme = ExtResource("1_uhymq")
-text = "Версия 0.0.1"
+text = "Версия 0.0.2"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SubViewportContainer/SubViewport/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("1_uhymq")
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -58,41 +86,41 @@ theme = ExtResource("1_uhymq")
 text = "Зайцы плохо на тебя влияют"
 label_settings = ExtResource("2_lk8p1")
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 theme = ExtResource("1_uhymq")
 
-[node name="Start" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
+[node name="Start" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
 layout_mode = 2
 mouse_filter = 0
 text = "Начать игру"
 metadata/_edit_pinned_properties_ = [&"mouse_filter"]
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 theme = ExtResource("1_uhymq")
 
-[node name="Settings" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
+[node name="Settings" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
 layout_mode = 2
 mouse_filter = 0
 text = "Настройки"
 metadata/_edit_pinned_properties_ = [&"mouse_filter"]
 
-[node name="Quit" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
+[node name="Quit" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_rxbl0")]
 layout_mode = 2
 mouse_filter = 0
 text = "Выход"
 metadata/_edit_pinned_properties_ = [&"mouse_filter"]
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(0, 16.555)
 layout_mode = 2
 mouse_filter = 2
 theme = ExtResource("1_uhymq")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/MarginContainer/VBoxContainer/GridContainer/Quit" to="." method="_on_quit_pressed"]
