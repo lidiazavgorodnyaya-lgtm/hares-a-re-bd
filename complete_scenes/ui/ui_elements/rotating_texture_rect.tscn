@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://l1lvcjfa8uyy"]
+
+[ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="1_adiom"]
+[ext_resource type="Script" uid="uid://2d1ya0utumcd" path="res://complete_scenes/ui/ui_elements/rotating_texture_rect.gd" id="2_wgl6c"]
+[ext_resource type="Texture2D" uid="uid://du4wtkgeb6kt" path="res://complete_scenes/ui/ui_elements/cogs/cog_rotated_1.tres" id="2_yqjaj"]
+
+[node name="RotatingTextureRect" type="TextureRect"]
+process_mode = 3
+offset_right = 128.0
+offset_bottom = 128.0
+rotation = 1.226764
+pivot_offset = Vector2(64, 64)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_adiom")
+texture = ExtResource("2_yqjaj")
+script = ExtResource("2_wgl6c")
+rotation_direction = -1
+rotation_speed = 0.31864092
