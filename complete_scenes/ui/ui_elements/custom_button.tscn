@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctojs5873o1f5"]
+[gd_scene load_steps=5 format=3 uid="uid://ctojs5873o1f5"]
 
 [ext_resource type="Theme" uid="uid://ck3lqv73gdnwl" path="res://complete_scenes/ui/ui_theme/main_theme.tres" id="1_bscni"]
 [ext_resource type="Script" uid="uid://qa4xfjnvxbq5" path="res://complete_scenes/ui/ui_elements/custom_button.gd" id="1_u3pxb"]
-[ext_resource type="Texture2D" uid="uid://bgrb6iavyw3xo" path="res://assets/textures/effects/T_5x5_menacing.png" id="3_lgyn2"]
+
+[sub_resource type="Gradient" id="Gradient_bscni"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lgyn2"]
+gradient = SubResource("Gradient_bscni")
 
 [node name="CustomButton" type="Button"]
 custom_minimum_size = Vector2(400, 100)
-offset_right = 250.0
-offset_bottom = 60.0
+offset_right = 400.0
+offset_bottom = 100.0
 theme = ExtResource("1_bscni")
 script = ExtResource("1_u3pxb")
 
@@ -18,11 +23,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -8.0
-offset_top = -6.0
-offset_right = 6.1799927
-offset_bottom = 6.0
+offset_left = -5.0
+offset_top = 14.0
+offset_right = -5.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_lgyn2")
+texture = SubResource("GradientTexture1D_lgyn2")
 expand_mode = 1
