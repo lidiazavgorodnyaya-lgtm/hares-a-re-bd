@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dkar06pst402u"]
+[gd_scene load_steps=39 format=3 uid="uid://dkar06pst402u"]
 
 [ext_resource type="Script" uid="uid://rrcahhioggsb" path="res://complete_scenes/world/world_metadta.gd" id="1_ghntx"]
 [ext_resource type="Script" uid="uid://drn0toocsmfax" path="res://addons/better_vircle/vircle_node.gd" id="1_i6xxv"]
@@ -52,10 +52,17 @@ seamless = true
 bg_color = Color(0.11, 0.018333336, 0, 1)
 
 [sub_resource type="Environment" id="Environment_ghntx"]
+background_mode = 3
 ambient_light_source = 2
 ambient_light_color = Color(0.19, 0.0798, 0.0798, 1)
 glow_enabled = true
 glow_normalized = true
+glow_intensity = 2.86
+glow_strength = 0.5
+glow_bloom = 0.15
+glow_blend_mode = 0
+glow_hdr_threshold = 0.54
+glow_hdr_luminance_cap = 73.98
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uelcd"]
 atlas = ExtResource("9_7jtaf")
@@ -177,16 +184,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_uelcd"]
-offsets = PackedFloat32Array(0.6050157, 0.97805643)
-colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_lfiec"]
-gradient = SubResource("Gradient_uelcd")
-fill = 1
-fill_from = Vector2(0.47435898, 0.46153846)
-fill_to = Vector2(0, 0)
-
 [node name="ChooseLevel" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -207,7 +204,7 @@ offset_left = 1378.0
 offset_top = 915.0
 offset_right = 1418.0
 offset_bottom = 955.0
-rotation = 3326.2961
+rotation = 3551.7952
 pivot_offset = Vector2(20, 20)
 mouse_filter = 1
 script = ExtResource("1_i6xxv")
@@ -222,7 +219,7 @@ offset_left = 255.625
 offset_top = -44.0
 offset_right = 383.625
 offset_bottom = 84.0
-rotation = -3326.2961
+rotation = -3551.7952
 pivot_offset = Vector2(64, 64)
 texture = ExtResource("8_6vj54")
 
@@ -240,7 +237,7 @@ offset_left = -193.81252
 offset_top = 215.48285
 offset_right = -65.812515
 offset_bottom = 343.48285
-rotation = -3326.2961
+rotation = -3551.7952
 pivot_offset = Vector2(64, 64)
 texture = ExtResource("8_6vj54")
 
@@ -258,7 +255,7 @@ offset_left = -193.81247
 offset_top = -303.48288
 offset_right = -65.81247
 offset_bottom = -175.48288
-rotation = -3326.2961
+rotation = -3551.7952
 pivot_offset = Vector2(64, 64)
 texture = ExtResource("8_6vj54")
 
@@ -305,26 +302,18 @@ offset_bottom = 786.0
 environment = SubResource("Environment_ghntx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1712, 946)
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+position = Vector2(1712, 984.99994)
 scale = Vector2(3.6875, 3.6875)
 sprite_frames = SubResource("SpriteFrames_fgfxv")
 frame_progress = 0.54265386
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(1592, 997)
+modulate = Color(2.184344, 2.184344, 2.184344, 1)
+position = Vector2(1606, 1011.00006)
 scale = Vector2(3.6875, 3.6875)
 sprite_frames = SubResource("SpriteFrames_fgfxv")
 frame_progress = 0.39871788
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = SubResource("GradientTexture2D_lfiec")
 
 [connection signal="pressed" from="PlanetCardJungle" to="." method="_on_planet_card_jungle_pressed"]
 [connection signal="pressed" from="PlanetCardWater" to="." method="_on_planet_card_water_pressed"]
