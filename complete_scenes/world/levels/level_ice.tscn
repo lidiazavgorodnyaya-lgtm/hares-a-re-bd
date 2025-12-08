@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://3ayi106vw5rv" path="res://assets/textures/parallax_textures/Iceberg/5-iceberg.png" id="10_iakn2"]
 [ext_resource type="PackedScene" uid="uid://xn5yhb7a3dga" path="res://complete_scenes/entities/player/player.tscn" id="11_84lrg"]
 [ext_resource type="PackedScene" uid="uid://bijr6gpgod2m2" path="res://complete_scenes/ui/gui.tscn" id="12_hyhj0"]
-[ext_resource type="PackedScene" uid="uid://v7a10sbutsov" path="res://complete_scenes/entities/enemy/black_hare.tscn" id="13_fj6cr"]
+[ext_resource type="PackedScene" uid="uid://gjujxrfcpgk7" path="res://complete_scenes/entities/effects/env_effects/wind_trail.tscn" id="13_wardp"]
 
 [sub_resource type="TileSet" id="TileSet_abcfb"]
 
@@ -93,23 +93,23 @@ scroll_scale = Vector2(0.865, 1)
 scroll_offset = Vector2(434, 274)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Iceberg"]
-scale = Vector2(0.5979245, 0.5979245)
+position = Vector2(3.4113517, 0)
+scale = Vector2(0.59882224, 0.5979245)
 texture = ExtResource("10_iakn2")
 
 [node name="Player" parent="." instance=ExtResource("11_84lrg")]
-position = Vector2(668, 439)
+position = Vector2(-1141, 422)
 speed = 20000.0
 
 [node name="LimitedCamera2D" type="Camera2D" parent="Player"]
-position = Vector2(-5, -161)
 zoom = Vector2(0.93, 0.93)
 limit_left = -1860
 limit_top = -580
-limit_right = 1860
-limit_bottom = 580
+limit_right = 1605
+limit_bottom = 565
 
 [node name="GUI" parent="." instance=ExtResource("12_hyhj0")]
 
-[node name="BlackHare" parent="." instance=ExtResource("13_fj6cr")]
-position = Vector2(112, 320.00003)
-scale = Vector2(1.6688489, 1.6688489)
+[node name="WindTrail" parent="." instance=ExtResource("13_wardp")]
+position = Vector2(-171.00002, -92)
+scale = Vector2(9.3, 2.74)
