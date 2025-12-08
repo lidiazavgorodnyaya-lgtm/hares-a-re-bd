@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1t8m2dogk1at"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wa5q7"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_dbjtc"]
+_data = [Vector2(0, 0), 0.0, 2.24009, 0, 0, Vector2(0.497696, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.60817, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_dkf1p"]
+curve = SubResource("Curve_dbjtc")
+
+[sub_resource type="Gradient" id="Gradient_08mhp"]
+colors = PackedColorArray(1, 1, 1, 0.0862745, 1, 1, 1, 0.2)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rfofe"]
+gradient = SubResource("Gradient_08mhp")
+
+[sub_resource type="Curve" id="Curve_sk5ge"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_tvd5m"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15), 0.0, 81.2937, 0, 0, Vector2(0.35023, 30), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_n1igm"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_r6mjp"]
+curve_x = SubResource("Curve_sk5ge")
+curve_y = SubResource("Curve_tvd5m")
+curve_z = SubResource("Curve_n1igm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yxhoy"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(893, 0, 0)
+emission_shape = 3
+emission_box_extents = Vector3(1080, 1, 1)
+gravity = Vector3(0, 3000, 0)
+scale_min = 0.2
+scale_over_velocity_curve = SubResource("CurveXYZTexture_r6mjp")
+color_initial_ramp = SubResource("GradientTexture1D_rfofe")
+alpha_curve = SubResource("CurveTexture_dkf1p")
+collision_mode = 2
+
+[node name="Rain" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = 100
+material = SubResource("CanvasItemMaterial_wa5q7")
+amount = 10000
+lifetime = 0.78
+preprocess = 0.5
+randomness = 0.13
+collision_base_size = 60.0
+visibility_rect = Rect2(0, 0, 1920, 1080)
+process_material = SubResource("ParticleProcessMaterial_yxhoy")
