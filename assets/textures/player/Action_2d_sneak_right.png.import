@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tyre4wpprqyd"
-path="res://.godot/imported/Action_2d_sneak_right.png-cdf31b87a148c78ccbaccd63eaaf62fd.ctex"
+path="res://.godot/imported/Action_2d_sneak_right.png-bf459ef90d36b40782a78bc413708a0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Action_2d_sneak_right.png"
-dest_files=["res://.godot/imported/Action_2d_sneak_right.png-cdf31b87a148c78ccbaccd63eaaf62fd.ctex"]
+source_file="res://assets/textures/player/Action_2d_sneak_right.png"
+dest_files=["res://.godot/imported/Action_2d_sneak_right.png-bf459ef90d36b40782a78bc413708a0e.ctex"]
 
 [params]
 
