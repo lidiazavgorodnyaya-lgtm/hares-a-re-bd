@@ -62,8 +62,8 @@ theme = ExtResource("2_0hxwo")
 show_behind_parent = true
 light_mask = 524288
 z_index = 1
-position = Vector2(274.00003, 203.00002)
-scale = Vector2(2.5618937, 2.5618937)
+position = Vector2(280, 200)
+scale = Vector2(0.6914061, 0.69140613)
 sprite_frames = ExtResource("3_op0k2")
 
 [node name="Description" type="RichTextLabel" parent="."]

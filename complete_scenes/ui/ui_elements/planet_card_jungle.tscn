@@ -39,8 +39,8 @@ theme = ExtResource("2_ecev8")
 show_behind_parent = true
 light_mask = 524288
 z_index = 1
-position = Vector2(274.00003, 203.00002)
-scale = Vector2(2.5618937, 2.5618937)
+position = Vector2(280, 200)
+scale = Vector2(0.6914061, 0.69140613)
 sprite_frames = ExtResource("3_3qean")
 
 [node name="Description" type="RichTextLabel" parent="."]
@@ -85,11 +85,11 @@ mouse_filter = 1
 
 [node name="RotatingTextureRect" parent="RotatedCogs" instance=ExtResource("10_82avr")]
 layout_mode = 0
-offset_left = 107.99997
-offset_top = 244.99997
-offset_right = 235.99997
-offset_bottom = 372.99997
-rotation = 1.0196484
+offset_left = 90.000015
+offset_top = 254.0
+offset_right = 218.00002
+offset_bottom = 382.0
+rotation = 0.2549128
 
 [node name="RotatingTextureRect2" parent="RotatedCogs" instance=ExtResource("10_82avr")]
 layout_mode = 0
@@ -97,7 +97,7 @@ offset_left = 238.00002
 offset_top = -9.999985
 offset_right = 366.0
 offset_bottom = 118.000015
-rotation = 4.439745
+rotation = 3.797161
 pivot_offset = Vector2(63.999992, 64)
 texture = ExtResource("11_vv6ok")
 
