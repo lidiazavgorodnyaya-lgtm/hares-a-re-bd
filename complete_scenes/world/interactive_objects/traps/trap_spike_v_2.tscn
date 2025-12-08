@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://bm3qcqmed2ab0"]
+
+[ext_resource type="Script" uid="uid://c6ujtovexri88" path="res://complete_scenes/world/interactive_objects/traps/trap_spike_v_2.gd" id="1_2woo7"]
+[ext_resource type="Texture2D" uid="uid://w6fvdue8s5o2" path="res://complete_scenes/world/interactive_objects/traps/tileset_16x32-Sheet.png" id="1_4li4e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3g1r"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(208, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqc4g"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(272, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bcae"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(240, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o73tj"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(208, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggj8m"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(208, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u27hj"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(240, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0aiv"]
+atlas = ExtResource("1_4li4e")
+region = Rect2(272, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xy4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3g1r")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqc4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bcae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o73tj")
+}],
+"loop": false,
+"name": &"spike_of",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggj8m")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_u27hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0aiv")
+}],
+"loop": false,
+"name": &"spike_on",
+"speed": 18.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_toim6"]
+size = Vector2(16, 16)
+
+[node name="TrapSpike_v2" type="Node2D"]
+editor_description = "Ловушка с шипами.
+Наносит одиночный урон, после чего отключается пока игрок стоит на ней.
+=варинат без таймера и конечного автомата="
+script = ExtResource("1_2woo7")
+damage = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_2xy4e")
+animation = &"spike_of"
+
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+shape = SubResource("RectangleShape2D_toim6")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]
+[connection signal="body_exited" from="DamageArea" to="." method="_on_damage_area_body_exited"]
