@@ -70,6 +70,9 @@ folder_colors={
 "res://docs/": "purple",
 "res://godot_state_charts_examples/": "pink",
 "res://guide_examples/": "pink",
+"res://guide_examples/2d_axis_mapping/": "orange",
+"res://guide_examples/action_priority/": "orange",
+"res://guide_examples/combos/": "orange",
 "res://localization/": "green"
 }
 
