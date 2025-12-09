@@ -8,7 +8,7 @@ extends CharacterBody2D
 signal take_damage(damage:float, knockback_direction: Vector2)
 
 ## скорость движения
-@export var speed: float = 200.
+@export var speed: float = 100.
 ## То, как объект будет выглядеть на карте
 @export var map_icon: Texture2D
 @export var hp: float = 100.0
