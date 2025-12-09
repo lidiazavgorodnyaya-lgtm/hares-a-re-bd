@@ -8,10 +8,13 @@
 [ext_resource type="Script" uid="uid://jk2jm1g6q853" path="res://addons/godot_state_charts/compound_state.gd" id="4_hcnbt"]
 [ext_resource type="PackedScene" uid="uid://cnmhlhtwvswct" path="res://complete_scenes/entities/shotgun/shotgun.tscn" id="4_qj4o6"]
 [ext_resource type="Script" uid="uid://cytafq8i1y8qm" path="res://addons/godot_state_charts/atomic_state.gd" id="5_t23pu"]
-[ext_resource type="SpriteFrames" uid="uid://bsdhwx7fa55x8" path="res://complete_scenes/entities/player/play_sprite.tres" id="5_usp81"]
+[ext_resource type="SpriteFrames" path="res://complete_scenes/entities/player/play_sprite.tres" id="5_usp81"]
 [ext_resource type="Script" uid="uid://cf1nsco3w0mf6" path="res://addons/godot_state_charts/transition.gd" id="6_cjfkd"]
 [ext_resource type="PackedScene" uid="uid://c522uyw28gd8c" path="res://complete_scenes/entities/entity_collision.tscn" id="7_hcnbt"]
-[ext_resource type="Script" uid="uid://cttowtr5jicft" path="res://complete_scenes/entities/player/sight_hud.gd" id="11_ld7iu"]
+[ext_resource type="Script" path="res://complete_scenes/entities/player/sight_hud.gd" id="11_ld7iu"]
+
+[sub_resource type="Animation" id="Animation_gdswy"]
+resource_name = "attack_left"
 
 [sub_resource type="Animation" id="Animation_h160s"]
 resource_name = "bunny_hop_left"
@@ -96,9 +99,6 @@ resource_name = "walk_right"
 
 [sub_resource type="Animation" id="Animation_qj4o6"]
 resource_name = "walk_up"
-
-[sub_resource type="Animation" id="Animation_gdswy"]
-resource_name = "attack_left"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qj4o6"]
 _data = {
@@ -283,7 +283,9 @@ rotation = -0.49620593
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharcterAnim"]
 sprite_frames = ExtResource("5_usp81")
-animation = &"wound"
+animation = &"sneak"
+frame = 9
+frame_progress = 0.9771269
 
 [node name="PlayerStateChart" type="Node" parent="."]
 script = ExtResource("2_u2bhs")
