@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://xn5yhb7a3dga"]
+[gd_scene load_steps=68 format=3 uid="uid://xn5yhb7a3dga"]
 
 [ext_resource type="Script" uid="uid://cmcttel0tywal" path="res://complete_scenes/entities/player/player.gd" id="1_2ja1o"]
 [ext_resource type="Script" uid="uid://bkm2qpcymw18x" path="res://complete_scenes/entities/player/charcter_anim.gd" id="2_cjfkd"]
@@ -6,21 +6,132 @@
 [ext_resource type="Script" uid="uid://c1vp0ojjvaby1" path="res://addons/godot_state_charts/parallel_state.gd" id="3_1poog"]
 [ext_resource type="Texture2D" uid="uid://tyre4wpprqyd" path="res://assets/textures/player/Action_2d_sneak_right.png" id="3_cjfkd"]
 [ext_resource type="Script" uid="uid://jk2jm1g6q853" path="res://addons/godot_state_charts/compound_state.gd" id="4_hcnbt"]
+[ext_resource type="PackedScene" uid="uid://cnmhlhtwvswct" path="res://complete_scenes/entities/shotgun/shotgun.tscn" id="4_qj4o6"]
 [ext_resource type="Script" uid="uid://cytafq8i1y8qm" path="res://addons/godot_state_charts/atomic_state.gd" id="5_t23pu"]
 [ext_resource type="Script" uid="uid://cf1nsco3w0mf6" path="res://addons/godot_state_charts/transition.gd" id="6_cjfkd"]
 [ext_resource type="PackedScene" uid="uid://c522uyw28gd8c" path="res://complete_scenes/entities/entity_collision.tscn" id="7_hcnbt"]
+[ext_resource type="Script" uid="uid://cttowtr5jicft" path="res://complete_scenes/entities/player/sight_hud.gd" id="11_ld7iu"]
+
+[sub_resource type="Animation" id="Animation_qj4o6"]
+resource_name = "walk_up"
+
+[sub_resource type="Animation" id="Animation_ld7iu"]
+resource_name = "walk_down"
+
+[sub_resource type="Animation" id="Animation_usp81"]
+resource_name = "walk_left"
+
+[sub_resource type="Animation" id="Animation_3rt7g"]
+resource_name = "walk_right"
+
+[sub_resource type="Animation" id="Animation_lqk7r"]
+resource_name = "idle_up"
+
+[sub_resource type="Animation" id="Animation_scn60"]
+resource_name = "idle_down"
 
 [sub_resource type="Animation" id="Animation_cjfkd"]
-resource_name = "idle"
+resource_name = "idle_left"
+
+[sub_resource type="Animation" id="Animation_bqy1l"]
+resource_name = "idle_right"
+
+[sub_resource type="Animation" id="Animation_qq88n"]
+resource_name = "run_up"
+
+[sub_resource type="Animation" id="Animation_dkd4c"]
+resource_name = "run_down"
+
+[sub_resource type="Animation" id="Animation_t4on0"]
+resource_name = "run_left"
+
+[sub_resource type="Animation" id="Animation_k2xfj"]
+resource_name = "run_right"
+
+[sub_resource type="Animation" id="Animation_jh0sj"]
+resource_name = "sneak_up"
+
+[sub_resource type="Animation" id="Animation_vobx8"]
+resource_name = "sneak_down"
+
+[sub_resource type="Animation" id="Animation_7wec4"]
+resource_name = "sneak_left"
+
+[sub_resource type="Animation" id="Animation_g2u6c"]
+resource_name = "sneak_right"
+
+[sub_resource type="Animation" id="Animation_8mu28"]
+resource_name = "paw_strike_left"
+
+[sub_resource type="Animation" id="Animation_lfs3t"]
+resource_name = "paw_strike_right"
+
+[sub_resource type="Animation" id="Animation_h160s"]
+resource_name = "bunny_hop_left"
+
+[sub_resource type="Animation" id="Animation_s4x6o"]
+resource_name = "bunny_hop_right"
+
+[sub_resource type="Animation" id="Animation_gu78p"]
+resource_name = "interact_left"
+
+[sub_resource type="Animation" id="Animation_gaaw8"]
+resource_name = "interact_right"
+
+[sub_resource type="Animation" id="Animation_idsnt"]
+resource_name = "interact_up"
+
+[sub_resource type="Animation" id="Animation_ubdj6"]
+resource_name = "interact_down"
+
+[sub_resource type="Animation" id="Animation_1wgyc"]
+resource_name = "collect_resources_left"
+
+[sub_resource type="Animation" id="Animation_vvy7k"]
+resource_name = "collect_resources_right"
+
+[sub_resource type="Animation" id="Animation_exwes"]
+resource_name = "collect_resources_up"
+
+[sub_resource type="Animation" id="Animation_q3w2v"]
+resource_name = "collect_resources_down"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qj4o6"]
 _data = {
-&"idle": SubResource("Animation_cjfkd")
+&"bunny_hop_left": SubResource("Animation_h160s"),
+&"bunny_hop_right": SubResource("Animation_s4x6o"),
+&"collect_resources_down": SubResource("Animation_q3w2v"),
+&"collect_resources_left": SubResource("Animation_1wgyc"),
+&"collect_resources_right": SubResource("Animation_vvy7k"),
+&"collect_resources_up": SubResource("Animation_exwes"),
+&"idle_down": SubResource("Animation_scn60"),
+&"idle_left": SubResource("Animation_cjfkd"),
+&"idle_right": SubResource("Animation_bqy1l"),
+&"idle_up": SubResource("Animation_lqk7r"),
+&"interact_down": SubResource("Animation_ubdj6"),
+&"interact_left": SubResource("Animation_gu78p"),
+&"interact_right": SubResource("Animation_gaaw8"),
+&"interact_up": SubResource("Animation_idsnt"),
+&"paw_strike_left": SubResource("Animation_8mu28"),
+&"paw_strike_right": SubResource("Animation_lfs3t"),
+&"run_down": SubResource("Animation_dkd4c"),
+&"run_left": SubResource("Animation_t4on0"),
+&"run_right": SubResource("Animation_k2xfj"),
+&"run_up": SubResource("Animation_qq88n"),
+&"sneak_down": SubResource("Animation_vobx8"),
+&"sneak_left": SubResource("Animation_7wec4"),
+&"sneak_right": SubResource("Animation_g2u6c"),
+&"sneak_up": SubResource("Animation_jh0sj"),
+&"walk_down": SubResource("Animation_ld7iu"),
+&"walk_left": SubResource("Animation_usp81"),
+&"walk_right": SubResource("Animation_3rt7g"),
+&"walk_up": SubResource("Animation_qj4o6")
 }
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_cjfkd"]
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_qj4o6"]
+blend_mode = 1
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ld7iu"]
 
@@ -121,6 +232,9 @@ graph_offset = Vector2(-62.990067, -176)
 [sub_resource type="CircleShape2D" id="CircleShape2D_t23pu"]
 radius = 36.013885
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ld7iu"]
+radius = 500.0
+
 [node name="Player" type="CharacterBody2D"]
 editor_description = "Наш братец-кролик"
 collision_mask = 598
@@ -131,7 +245,6 @@ script = ExtResource("1_2ja1o")
 script = ExtResource("2_cjfkd")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharcterAnim"]
-position = Vector2(0, -64)
 texture = ExtResource("3_cjfkd")
 hframes = 10
 
@@ -154,11 +267,14 @@ parameters/conditions/run = false
 parameters/conditions/sneak = false
 parameters/conditions/walk = false
 parameters/Attack/blend_position = Vector2(0, 0)
-parameters/Death/blend_position = Vector2(0, 0)
+parameters/Death/blend_position = Vector2(-0.0020877123, 0.0097846985)
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Run/blend_position = Vector2(0, 0)
 parameters/Sneak/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="Shotgun" parent="CharcterAnim" instance=ExtResource("4_qj4o6")]
+rotation = -0.49620593
 
 [node name="PlayerStateChart" type="Node" parent="."]
 script = ExtResource("2_u2bhs")
@@ -332,8 +448,18 @@ script = ExtResource("5_t23pu")
 script = ExtResource("5_t23pu")
 
 [node name="EntityCollision" parent="." instance=ExtResource("7_hcnbt")]
-position = Vector2(-2, -28)
 shape = SubResource("CircleShape2D_t23pu")
+
+[node name="SightHUD" type="Node2D" parent="."]
+script = ExtResource("11_ld7iu")
+
+[node name="Polygon2D" type="Polygon2D" parent="SightHUD"]
+z_index = 5
+color = Color(0.32, 0, 0, 1)
+polygon = PackedVector2Array(-4, -2, 0, -4, 4, -2, 4, 3, 0, 5, -4, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SightHUD"]
+shape = SubResource("CircleShape2D_ld7iu")
 
 [connection signal="state_processing" from="PlayerStateChart/Root/PlayerBehaviour/Run" to="." method="_on_run_state_processing"]
 [connection signal="state_processing" from="PlayerStateChart/Root/PlayerBehaviour/Walk" to="." method="_on_walk_state_processing"]

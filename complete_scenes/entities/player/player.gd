@@ -42,9 +42,9 @@ func _physics_process(delta: float) -> void:
 	Globals.player_direction = get_local_mouse_position().normalized() if input_direction == Vector2.ZERO else last_direction
 	#position += walk_action.value_axis_2d.normalized() * speed * delta
 	#position += run.value_axis_2d.normalized() * speed * delta
-	#position += input_direction * speed * delta
-	velocity = input_direction * speed * delta
-	move_and_slide()
+	position += input_direction * speed * delta
+	#velocity = input_direction * speed * delta
+	#move_and_slide()
 	DebugPanel.show_debug_info([global_position], 0)
 
 

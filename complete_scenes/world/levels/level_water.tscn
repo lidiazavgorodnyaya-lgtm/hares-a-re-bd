@@ -24,63 +24,65 @@ metadata/_custom_type_script = "uid://rrcahhioggsb"
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_abcfb")
 
-[node name="Sky" type="Parallax2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sky" type="Parallax2D" parent="Node2D"]
 scroll_offset = Vector2(681, 581)
 
-[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Sky"]
 position = Vector2(0.2, 1)
 texture = ExtResource("3_q86vi")
 
-[node name="WaterReflex" type="Parallax2D" parent="."]
+[node name="WaterReflex" type="Parallax2D" parent="Node2D"]
 scroll_scale = Vector2(0.9, 1)
 scroll_offset = Vector2(673, 577)
 
-[node name="Sprite2D2" type="Sprite2D" parent="WaterReflex"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/WaterReflex"]
 texture = ExtResource("4_cakpg")
 
-[node name="WaterReflexBack" type="Parallax2D" parent="."]
+[node name="WaterReflexBack" type="Parallax2D" parent="Node2D"]
 scroll_scale = Vector2(0.9, 1)
 scroll_offset = Vector2(1605, 635)
 
-[node name="Sprite2D2" type="Sprite2D" parent="WaterReflexBack"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/WaterReflexBack"]
 position = Vector2(-915, -57)
 scale = Vector2(1, 1.01)
 texture = ExtResource("5_aney7")
 
-[node name="Cloud" type="Parallax2D" parent="."]
+[node name="Cloud" type="Parallax2D" parent="Node2D"]
 scroll_scale = Vector2(0.2, 1)
 scroll_offset = Vector2(663, 770)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Cloud"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Cloud"]
 texture = ExtResource("6_mifyh")
 
-[node name="Mountains" type="Parallax2D" parent="."]
+[node name="Mountains" type="Parallax2D" parent="Node2D"]
 scroll_scale = Vector2(0.375, 1)
 scroll_offset = Vector2(297, 884)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Mountains"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Mountains"]
 texture = ExtResource("7_rtu32")
 
-[node name="IcebergReflex" type="Parallax2D" parent="."]
+[node name="IcebergReflex" type="Parallax2D" parent="Node2D"]
 scale = Vector2(0.9170948, 0.5386008)
 scroll_scale = Vector2(0.865, 1)
 scroll_offset = Vector2(818.9999, 854.00006)
 
-[node name="Sprite2D2" type="Sprite2D" parent="IcebergReflex"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/IcebergReflex"]
 scale = Vector2(0.5979245, 0.5979245)
 texture = ExtResource("8_wys5a")
 
-[node name="Iceberg" type="Parallax2D" parent="."]
+[node name="Iceberg" type="Parallax2D" parent="Node2D"]
 scale = Vector2(0.9170948, 0.5386008)
 scroll_scale = Vector2(0.865, 1)
 scroll_offset = Vector2(931, 897.00006)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Iceberg"]
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Iceberg"]
 scale = Vector2(0.5979245, 0.5979245)
 texture = ExtResource("9_01lsb")
 
 [node name="Player" parent="." instance=ExtResource("11_e21rw")]
-position = Vector2(788, 742)
+position = Vector2(224, 451)
 speed = 300.0
 
 [node name="LimitedCamera2D" type="Camera2D" parent="Player"]
