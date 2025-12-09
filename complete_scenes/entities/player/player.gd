@@ -28,43 +28,57 @@ extends BaseEntity
 @onready var idle: AtomicState  = $PlayerStateChart/Root/PlayerBehaviour/Idle
 
 func _process(delta: float) -> void:
+	pass
+
+
+
+func  on_damage_taken() -> void:
+	pass
+
+func _physics_process(delta: float) -> void:
 	input_direction = walk_action.value_axis_2d.normalized()
-	print(input_direction)
 	if input_direction != last_direction and input_direction != Vector2.ZERO:
 		last_direction = input_direction
 	Globals.player_direction = get_local_mouse_position().normalized() if input_direction == Vector2.ZERO else last_direction
 	#position += walk_action.value_axis_2d.normalized() * speed * delta
 	#position += run.value_axis_2d.normalized() * speed * delta
-	position += input_direction * speed * delta
-
-	#velocity = input_direction * speed * delta
-
-func  on_damage_taken() -> void:
-	pass
-
-func _physics_process(_delta: float) -> void:
-	DebugPanel.show_debug_info([global_position], 0)
+	#position += input_direction * speed * delta
+	velocity = input_direction * speed * delta
 	move_and_slide()
+	DebugPanel.show_debug_info([global_position], 0)
+
 
 func _ready() -> void:
 	walk_action.triggered.connect(on_walk_triggered)
 	run_action.triggered.connect(on_run_triggered)
 	sneak_action.triggered.connect(on_sneak_triggered)
 
-
+##
 func on_walk_triggered() -> void:
 	DebugPanel.show_debug_info(["on_walk_triggered"], 1)
 	if not walk.active:
 		player_state_chart.send_event("walking")
 
-
+##
 func on_run_triggered() -> void:
 	DebugPanel.show_debug_info(["on_run_triggered"], 1)
 	if not run.active:
 		player_state_chart.send_event("running")
 
-
+##
 func on_sneak_triggered() -> void:
 	DebugPanel.show_debug_info(["on_sneak_triggered"], 1)
 	if not sneak.active:
 		player_state_chart.send_event("sneaking")
+
+
+func _on_run_state_processing(delta: float) -> void:
+	pass # Replace with function body.
+
+
+func _on_walk_state_processing(delta: float) -> void:
+	pass # Replace with function body.
+
+
+func _on_sneak_state_processing(delta: float) -> void:
+	pass # Replace with function body.
