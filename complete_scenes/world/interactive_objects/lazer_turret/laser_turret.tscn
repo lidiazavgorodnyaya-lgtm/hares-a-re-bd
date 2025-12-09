@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4pk3fb211evf"]
+
+[ext_resource type="Script" uid="uid://epocgg6kv78w" path="res://complete_scenes/world/interactive_objects/lazer_turret/laser_turret.gd" id="1_5xb8v"]
+
+[node name="LaserTurret" type="Node2D"]
+script = ExtResource("1_5xb8v")
